@@ -1,0 +1,11 @@
+# Makefile.lang.node — node install/test recipes (registry-driven, graceful-degrading).
+
+node.install: ## (node) install deps
+	@[ -n "$(NPM)" ] || { echo "skip: no npm"; exit 0; }; \
+	cd "$(ROOT_DIR)" && set -euo pipefail && $(NPM) install
+
+node.test: ## (node) run tests
+	@[ -n "$(NPM)" ] || { echo "skip: no npm"; exit 0; }; \
+	cd "$(ROOT_DIR)" && set -euo pipefail && $(NPM) test
+
+.PHONY: node.install node.test

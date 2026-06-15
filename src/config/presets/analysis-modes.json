@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "id": "analysis-modes",
+  "kind": "analysis-mode-catalog",
+  "title": "Analysis Modes",
+  "description": "Ways to analyze an ingested dataset.",
+  "presets": [
+    { "id": "ingest",      "kind": "analysis-mode", "label": "Ingest",      "detail": "Load an Excel/CSV file", "description": "Parse a workbook or CSV into a queryable dataset." },
+    { "id": "row-by-row",  "kind": "analysis-mode", "label": "Row-by-Row",  "detail": "Step through rows",       "description": "Walk records one at a time, taking notes and flags." },
+    { "id": "search",      "kind": "analysis-mode", "label": "Search",      "detail": "Query the dataset",       "description": "Filter/find rows by column predicates or text." }
+  ]
+}
